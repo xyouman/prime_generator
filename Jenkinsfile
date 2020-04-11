@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+                retry(3) {
+                    bat echo 'run makefile: '
+                    bat call make
+                }
             }
         }
     }
