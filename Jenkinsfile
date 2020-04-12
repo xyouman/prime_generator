@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 retry(3) {
-                    bat echo 'run makefile: '
+                    bat echo 'run makefile'
                 }
             }
         }
