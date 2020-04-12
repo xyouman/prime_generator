@@ -5,7 +5,6 @@ pipeline {
             steps {
                 retry(3) {
                     bat echo 'run makefile: '
-                    bat call make
                 }
             }
         }
