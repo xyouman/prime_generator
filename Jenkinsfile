@@ -3,9 +3,11 @@ pipeline {
     stages {
         stage('deploy') {
             steps {
-                retry(3) {
-                    bat echo 'run makefile'
-                }
+                sh 'hellow world'
+                sh '''
+                    echo 'test echo 1'
+                    echo 'test echo 2'
+                   '''
             }
         }
     }
